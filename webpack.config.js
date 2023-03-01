@@ -27,6 +27,34 @@ const config = {
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
     ]
+  },
+  resolve: {
+    fallback: {
+      "path": false,
+      "stream": false,
+      "util": false,
+      "zlib": false,
+      "os": false,
+      "vm": false,
+      "assert": false,
+      "crypto": false,
+      "constants": false,
+      "querystring": false,
+      "url": false,
+      "https": false,
+      "http": false,
+      "tty": false,
+      "async_hooks": false,
+      "coffee-script": false,
+      "child_process": false,
+      "worker_threads": false,
+      "fs": false,
+      "module": false,
+      "dns": false,
+      "tls": false,
+      "net": false,
+      "readline": false
+    }
   }
 };
 
