@@ -1,0 +1,7 @@
+node_modules
+.editorconfig
+package.json
+package-lock.json
+README.md
+
+dist/
