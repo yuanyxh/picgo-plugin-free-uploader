@@ -2,7 +2,7 @@
  * @Author: yuanyxh 15766118362@139.com
  * @Date: 2023-03-01 21:42:43
  * @LastEditors: yuanyxh 15766118362@139.com
- * @LastEditTime: 2023-03-03 00:42:00
+ * @LastEditTime: 2023-03-03 10:27:58
  * @FilePath: \custom-uploader\src\index.js
  * @Description: plugin entry, init uploader config
  */
@@ -13,11 +13,9 @@ const { createLog } = require('./utils');
 
 module.exports = function custom_uploader(ctx) {
   const register = () => {
-    ctx.on('fail', (err) => {
-      ctx.emit('notification', {
-        title: '上传失败',
-        body: err
-      })
+    /** FIXME: 待完善 */
+    ctx.on('failed', (err) => {
+      ctx.log.error('上传失败', err);
     });
 
     ctx.helper.uploader.register('custom-uploader', {

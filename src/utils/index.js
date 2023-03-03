@@ -2,7 +2,7 @@
  * @Author: yuanyxh 15766118362@139.com
  * @Date: 2023-03-02 12:59:59
  * @LastEditors: yuanyxh 15766118362@139.com
- * @LastEditTime: 2023-03-03 01:50:33
+ * @LastEditTime: 2023-03-03 11:42:27
  * @FilePath: \picgo-plugin-custom-uploader-master\src\utils\index.js
  * @Description: utils files, you can use these functions and add new util
  */
@@ -84,7 +84,7 @@ function createExecutor(code) {
     try {
       return handle();
     } catch(err) {
-      log(err);
+      log('error in your script', err);
     }
   `
   );
@@ -106,7 +106,11 @@ function merge(...args) {
  */
 function parse(arg) {
   if (!arg) return {};
-  return JSON.parse(arg);
+  try {
+    return JSON.parse(arg);
+  } catch (err) {
+    return {};
+  }
 }
 
 module.exports = {

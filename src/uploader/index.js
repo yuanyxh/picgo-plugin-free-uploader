@@ -2,14 +2,20 @@
  * @Author: yuanyxh 15766118362@139.com
  * @Date: 2023-03-02 16:44:24
  * @LastEditors: yuanyxh 15766118362@139.com
- * @LastEditTime: 2023-03-03 02:14:55
+ * @LastEditTime: 2023-03-03 11:07:47
  * @FilePath: \picgo-plugin-custom-uploader\src\uploader\index.js
  * @Description: custom-uploader, upload image related logic
  */
 
 const fs = require('fs');
 const sandbox = require('../utils/sandbox');
-const { createSelector, createExecutor, merge, parse } = require('../utils');
+const {
+  createSelector,
+  createExecutor,
+  merge,
+  parse,
+  isExist
+} = require('../utils');
 const { REQUEST_HEADER } = require('../config');
 
 /**
@@ -183,18 +189,13 @@ const createUploader = (context, config) => {
 
       const current = list[i];
       const options = normalizeParams(userConfig, current, data);
-
+      ctx.log.error('current', current);
       try {
         const results = await ctx.Request.request(options);
         navigation || (current['imgUrl'] = results);
         navigation &&
           (() => {
             current['imgUrl'] = createSelector(parse(results))(navigation);
-            ctx.log.error(
-              'test',
-              createSelector(parse(results))(navigation),
-              current
-            );
           })();
       } catch (err) {
         ctx.log.error(err);
