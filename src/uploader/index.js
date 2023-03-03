@@ -3,8 +3,8 @@
  * @Date: 2023-03-02 16:44:24
  * @LastEditors: yuanyxh 15766118362@139.com
  * @LastEditTime: 2023-03-03 11:07:47
- * @FilePath: \picgo-plugin-custom-uploader\src\uploader\index.js
- * @Description: custom-uploader, upload image related logic
+ * @FilePath: \picgo-plugin-free-uploader\src\uploader\index.js
+ * @Description: free-uploader, upload image related logic
  */
 
 const fs = require('fs');
@@ -33,7 +33,7 @@ const { REQUEST_HEADER } = require('../config');
  * }
  */
 const config = (ctx) => {
-  let userConfig = ctx.getConfig('picBed.custom-uploader');
+  let userConfig = ctx.getConfig('picBed.free-uploader');
   if (!userConfig) {
     userConfig = {};
   }
@@ -104,7 +104,7 @@ const guiMenu = (ctx) => [
         try {
           data &&
             ctx.saveConfig({
-              'picBed.custom-uploader.code': data.toString()
+              'picBed.free-uploader.code': data.toString()
             });
           ctx.emit('notification', {
             title: '完成',
@@ -167,7 +167,7 @@ const createUploader = (context, config) => {
       userConfig = null;
     const selector = createSelector(config);
 
-    userConfig = selector('picBed.custom-uploader') || {};
+    userConfig = selector('picBed.free-uploader') || {};
     if (!userConfig.url || !userConfig.param)
       return ctx.emit('notification', {
         title: '上传失败',

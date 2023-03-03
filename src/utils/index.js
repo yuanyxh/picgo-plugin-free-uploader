@@ -3,7 +3,7 @@
  * @Date: 2023-03-02 12:59:59
  * @LastEditors: yuanyxh 15766118362@139.com
  * @LastEditTime: 2023-03-03 11:42:27
- * @FilePath: \picgo-plugin-custom-uploader-master\src\utils\index.js
+ * @FilePath: \picgo-plugin-free-uploader-master\src\utils\index.js
  * @Description: utils files, you can use these functions and add new util
  */
 

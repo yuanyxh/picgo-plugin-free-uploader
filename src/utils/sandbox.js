@@ -3,7 +3,7 @@
  * @Date: 2023-03-02 00:34:43
  * @LastEditors: yuanyxh 15766118362@139.com
  * @LastEditTime: 2023-03-02 22:41:24
- * @FilePath: \picgo-plugin-custom-uploader\src\utils\sandbox.js
+ * @FilePath: \picgo-plugin-free-uploader\src\utils\sandbox.js
  * @Description: sandbox file, manage the sandbox tool
  */
 

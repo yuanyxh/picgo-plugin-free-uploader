@@ -3,7 +3,7 @@
  * @Date: 2023-03-02 15:26:49
  * @LastEditors: yuanyxh 15766118362@139.com
  * @LastEditTime: 2023-03-03 00:01:42
- * @FilePath: \picgo-plugin-custom-uploader\src\config\index.js
+ * @FilePath: \picgo-plugin-free-uploader\src\config\index.js
  * @Description: config file, set plugin global configuration
  */
 

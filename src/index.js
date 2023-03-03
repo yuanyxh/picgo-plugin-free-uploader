@@ -3,7 +3,7 @@
  * @Date: 2023-03-01 21:42:43
  * @LastEditors: yuanyxh 15766118362@139.com
  * @LastEditTime: 2023-03-03 10:27:58
- * @FilePath: \custom-uploader\src\index.js
+ * @FilePath: \free-uploader\src\index.js
  * @Description: plugin entry, init uploader config
  */
 
@@ -18,7 +18,7 @@ module.exports = function custom_uploader(ctx) {
       ctx.log.error('上传失败', err);
     });
 
-    ctx.helper.uploader.register('custom-uploader', {
+    ctx.helper.uploader.register('free-uploader', {
       name: '自定义图片上传',
       handle: createUploader(
         { ...CONTEXT, log: createLog(ctx) },
@@ -28,5 +28,5 @@ module.exports = function custom_uploader(ctx) {
     });
   };
 
-  return { uploader: 'custom-uploader', register, guiMenu };
+  return { uploader: 'free-uploader', register, guiMenu };
 };

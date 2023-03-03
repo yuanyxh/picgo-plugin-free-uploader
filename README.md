@@ -1,4 +1,4 @@
-# picgo-plugin-custom-uploader
+# picgo-plugin-free-uploader
 
 ## 介绍
 
@@ -13,7 +13,7 @@
 克隆本项目至本地
 
 ```cmd
-git clone https://github.com/yuki-xin/picgo-plugin-web-uploader.git
+git clone https://github.com/yuanyxh/picgo-plugin-free-uploader.git
 ```
 
 进入项目根目录并安装插件所需依赖
