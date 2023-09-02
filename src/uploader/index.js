@@ -179,8 +179,14 @@ const createUploader = (context, config) => {
     for (let i = 0; i < list.length; i++) {
       let data = null;
       try {
-        data = code && (await run(createExecutor(code)));
+        if (code && code.trim()) {
+          data = await run(createExecutor(code));
+        } else {
+          data = {};
+        }
       } catch (err) {
+        data = {};
+
         ctx.log.error(
           'the code is running abnormally, please check your script',
           err
